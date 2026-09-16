@@ -1,0 +1,39 @@
+#!/bin/sh
+
+PROTECTED_BRANCH="release/production-live"
+AUTHORIZED_USER='SANJEEV-BUI0136\sanjeev_brightuitech'
+
+CURRENT_USER=$(git config user.name)
+
+while read local_ref local_sha remote_ref remote_sha
+do
+    remote_branch=$(echo "$remote_ref" | sed 's#refs/heads/##')
+
+    if [ "$remote_branch" = "$PROTECTED_BRANCH" ]; then
+
+        if [ "$CURRENT_USER" != "$AUTHORIZED_USER" ]; then
+            echo ""
+            echo "=========================================="
+            echo "           PUSH BLOCKED"
+            echo "=========================================="
+            echo ""
+            echo "Production branch : $PROTECTED_BRANCH"
+            echo "Current user      : $CURRENT_USER"
+            echo "Authorized user   : $AUTHORIZED_USER"
+            echo ""
+            echo "You are NOT authorized to push to production."
+            echo ""
+            exit 1
+        fi
+
+        echo ""
+        echo "=========================================="
+        echo "          PUSH AUTHORIZED"
+        echo "=========================================="
+        echo ""
+        echo "User: $CURRENT_USER"
+        echo ""
+    fi
+done
+
+exit 0
