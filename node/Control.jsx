@@ -67,6 +67,38 @@ function Control() {
       Dashboard Control
     </button>
   );
+  return (
+    <button
+      className="secondary-button"
+      onClick={handleControl}
+    >
+      Dashboard Control
+    </button>
+  );
+  return (
+    <button
+      className="secondary-button"
+      onClick={handleControl}
+    >
+      Dashboard Control
+    </button>
+  );
+  return (
+    <button
+      className="secondary-button"
+      onClick={handleControl}
+    >
+      Dashboard Control
+    </button>
+  );
+  return (
+    <button
+      className="secondary-button"
+      onClick={handleControl}
+    >
+      Dashboard Control
+    </button>
+  );
 }
 
 export default Control;
