@@ -11,35 +11,6 @@ function Modifier() {
       Modify Dashboard
     </button>
   );
-  return (
-    <button
-      className="primary-button"
-      onClick={handleModify}
-    >
-      Modify Dashboard
-    </button>
-  );  return (
-    <button
-      className="primary-button"
-      onClick={handleModify}
-    >
-      Modify Dashboard
-    </button>
-  );  return (
-    <button
-      className="primary-button"
-      onClick={handleModify}
-    >
-      Modify Dashboard
-    </button>
-  );  return (
-    <button
-      className="primary-button"
-      onClick={handleModify}
-    >
-      Modify Dashboard
-    </button>
-  );
 }
 
 export default Modifier;
